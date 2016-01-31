@@ -10,7 +10,7 @@ class FizzRule: Rule {
         return isFizz(number) ? FIZZ_RESPONSE : ""
     }
     
-    func isFizz(number: Int) -> Bool {
+    private func isFizz(number: Int) -> Bool {
     
         return number % FIZZ_VALUE == 0
     }

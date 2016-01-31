@@ -10,7 +10,7 @@ class BuzzRule: Rule {
         return isBuzz(number) ? BUZZ_RESPONSE : ""
     }
     
-    func isBuzz(number: Int) -> Bool {
+    private func isBuzz(number: Int) -> Bool {
         
         return number % BUZZ_VALUE == 0
     }

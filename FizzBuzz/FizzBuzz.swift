@@ -14,14 +14,10 @@ class FizzBuzz {
     
     func check(number: Int) -> String{
     
-        var returnValue = ""
-        
-        for rule in rules{
-        
-            returnValue += rule.transform(number, returnValue: returnValue)
-        }
-        
-        return returnValue
+        return rules.reduce("", combine: { (returnValue, rule) -> String in
+            
+            return returnValue + rule.transform(number, returnValue: returnValue)
+        })
         
     }
 }
